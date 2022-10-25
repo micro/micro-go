@@ -1,4 +1,4 @@
-# Micro API Client [![godoc](https://godoc.org/github.com/micro/micro-go?status.svg)](https://godoc.org/github.com/micro/micro-go) 
+# Micro Go Client [![godoc](https://godoc.org/github.com/micro/micro-go?status.svg)](https://godoc.org/github.com/micro/micro-go) 
 
 This is the Go client to access services on the Micro Platform
 
@@ -11,7 +11,7 @@ import (
     "fmt"
     "os"
 
-    "github.com/micro/micro/v3/client/api"
+    "github.com/micro/micro-go"
 )
 
 type Request struct {
@@ -27,7 +27,7 @@ var (
 )
 
 func main() {
-	c := api.NewClient(nil)
+	c := micro.NewClient(nil)
 
 	// set your api token
 	c.SetToken(token)
@@ -57,7 +57,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/micro/micro/v3/client/api"
+	"github.com/micro/micro-go"
 )
 
 type Request struct {
@@ -73,7 +73,7 @@ var (
 )
 
 func main() {
-	c := api.NewClient(nil)
+	c := micro.NewClient(nil)
 
 	// set your api token
 	c.SetToken(token)
